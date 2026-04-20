@@ -1,6 +1,6 @@
 <?php
 
-global $heartly_option;
+global $kidzu_option;
 $post_id      = get_the_id();
 //checking page layout 
 $page_layout = get_post_meta($post->ID, 'layout', true);
@@ -42,13 +42,13 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
                         }
 
                         $tp_portfolio_options = array(
-                            'portfolio_default' => esc_html__('Portfolio Default', 'heartly'),
-                            'top_image_carousel' => esc_html__('Top Image Carousel', 'heartly'),
-                            'top_carousel_center' => esc_html__('Top Carousel Center', 'heartly'),
-                            'left_gallery_image' => esc_html__('Left Gallery Image', 'heartly'),
-                            'left_gallery_grid' => esc_html__('Left Gallery Grid', 'heartly'),
-                            'bottom_gallery_grid' => esc_html__('Bottom Gallery Grid', 'heartly'),
-                            'top_gallery_carousel' => esc_html__('Top Gallery Carousel', 'heartly'),
+                            'portfolio_default' => esc_html__('Portfolio Default', 'kidzu'),
+                            'top_image_carousel' => esc_html__('Top Image Carousel', 'kidzu'),
+                            'top_carousel_center' => esc_html__('Top Carousel Center', 'kidzu'),
+                            'left_gallery_image' => esc_html__('Left Gallery Image', 'kidzu'),
+                            'left_gallery_grid' => esc_html__('Left Gallery Grid', 'kidzu'),
+                            'bottom_gallery_grid' => esc_html__('Bottom Gallery Grid', 'kidzu'),
+                            'top_gallery_carousel' => esc_html__('Top Gallery Carousel', 'kidzu'),
                         );
 
                         // Include the appropriate template part based on the selected layout
@@ -106,13 +106,13 @@ if ($selected_layout == 'top_carousel_center' && !is_active_sidebar('sidebar-por
                                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 py-xxl-15 py-xl-12 py-lg-10 py-md-8 py-7">
                                             <a href="<?php echo esc_url($url_next) ?>" class="d-flex align-items-center gap-2 black-clr fs-seven">
                                                 <i class="tp-arrow-left"></i>
-                                                <?php echo esc_attr__('Previous Show Case', 'heartly') ?>
+                                                <?php echo esc_attr__('Previous Show Case', 'kidzu') ?>
                                             </a>
                                             <?php $url_previous = is_object($previous_post) ? get_permalink($previous_post->ID) : '';
                                             $title = is_object($previous_post) ? get_the_title($previous_post->ID) : ''; ?>
                                             <?php if ($previous_post): ?>
                                                 <a href="<?php echo esc_url($url_previous) ?>" class="d-flex align-items-center gap-2 black-clr fs-seven">
-                                                    <?php echo esc_attr__('Next Show Case', 'heartly') ?> <i class="tp-arrow-right"></i>
+                                                    <?php echo esc_attr__('Next Show Case', 'kidzu') ?> <i class="tp-arrow-right"></i>
                                                 </a>
                                             <?php endif; ?>
                                         </div>

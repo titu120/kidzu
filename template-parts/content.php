@@ -9,7 +9,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php heartly_posted_on(); ?>
+			<?php kidzu_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -20,13 +20,13 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="nav-links">' . esc_html__( 'Pages:', 'heartly' ),
+				'before' => '<div class="nav-links">' . esc_html__( 'Pages:', 'kidzu' ),
 				'after'  => '</div>',				
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<div class="entry-footer">
-		<?php heartly_entry_footer(); ?>
+		<?php kidzu_entry_footer(); ?>
 	</div><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

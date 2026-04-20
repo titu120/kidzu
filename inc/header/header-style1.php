@@ -3,14 +3,14 @@
 /*
 Header Style 1
 */
-global $heartly_option;
-$sticky             = !empty($heartly_option['off_sticky']) ? $heartly_option['off_sticky'] : ''; 
+global $kidzu_option;
+$sticky             = !empty($kidzu_option['off_sticky']) ? $kidzu_option['off_sticky'] : ''; 
 $sticky_menu        = ($sticky == 1) ? ' menu-sticky' : '';
-$drob_aligns        = (!empty($heartly_option['drob_align_s'])) ? 'menu-drob-align' : '';
-$mobile_hide_search = (!empty($heartly_option['mobile_off_search'])) ? 'mobile-hide-search' : '';
-$mobile_hide_cart   = (!empty($heartly_option['mobile_off_cart'])) ? 'mobile-hide-cart-no' : 'mobile-hide-cart';
-$mobile_hide_button = (!empty($heartly_option['mobile_off_button'])) ? 'mobile-hide-button' : '';
-$mobile_logo_height = !empty($heartly_option['mobile_logo_height']) ? 'style = "max-height: '.$heartly_option['mobile_logo_height'].'"' : '';
+$drob_aligns        = (!empty($kidzu_option['drob_align_s'])) ? 'menu-drob-align' : '';
+$mobile_hide_search = (!empty($kidzu_option['mobile_off_search'])) ? 'mobile-hide-search' : '';
+$mobile_hide_cart   = (!empty($kidzu_option['mobile_off_cart'])) ? 'mobile-hide-cart-no' : 'mobile-hide-cart';
+$mobile_hide_button = (!empty($kidzu_option['mobile_off_button'])) ? 'mobile-hide-button' : '';
+$mobile_logo_height = !empty($kidzu_option['mobile_logo_height']) ? 'style = "max-height: '.$kidzu_option['mobile_logo_height'].'"' : '';
 
 // Header Options here
 require get_parent_theme_file_path('inc/header/header-options.php');
@@ -32,13 +32,13 @@ get_template_part('inc/header/off-canvas');
 <?php
 $menu_bg_color = !empty($menu_bg) ? 'style=background:'.$menu_bg.'' : '';
 ?>   
-<div class="menu-area menu_type_<?php echo esc_attr($main_menu_type);?>" <?php echo wp_kses($menu_bg_color, 'heartly');?>>    
+<div class="menu-area menu_type_<?php echo esc_attr($main_menu_type);?>" <?php echo wp_kses($menu_bg_color, 'kidzu');?>>    
     <div class="menu_one">
             <div class="row-table"> 
             <div class="col-cell header-logo">
                 <?php 
-                 if (!empty( $heartly_option['wplogo_mobile_rt']['url'] ) ) { ?>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img <?php echo wp_kses($mobile_logo_height, 'heartly');?> src="<?php echo esc_url( $heartly_option['wplogo_mobile_rt']['url']); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
+                 if (!empty( $kidzu_option['wplogo_mobile_rt']['url'] ) ) { ?>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img <?php echo wp_kses($mobile_logo_height, 'kidzu');?> src="<?php echo esc_url( $kidzu_option['wplogo_mobile_rt']['url']); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
                 <?php }else{
                  get_template_part('inc/header/logo'); 
                 } ?>

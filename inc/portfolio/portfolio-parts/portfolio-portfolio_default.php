@@ -37,19 +37,19 @@ $quote_title = get_post_meta(get_the_ID(), 'quote_title', true);
                 <div class="col-lg-3 col-md-4">
                     <div class="single-project-info d-grid gap-lg-8 gap-md-6 gap-5">
                         <div class="single-project-item wow fadeInUp" data-wow-delay="0.3s">
-                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Client', 'heartly'); ?></span>
+                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Client', 'kidzu'); ?></span>
                             <span class="n10-clr"><?php echo wp_kses_post($author_name); ?></span>
                         </div>
                         <div class="single-project-item wow fadeInUp" data-wow-delay="0.5s">
-                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Date', 'heartly'); ?></span>
+                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Date', 'kidzu'); ?></span>
                             <span class="n10-clr"><?php echo wp_kses_post($post_date); ?></span>
                         </div>
                         <div class="single-project-item wow fadeInUp" data-wow-delay="0.6s">
-                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Services', 'heartly'); ?></span>
+                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Services', 'kidzu'); ?></span>
                             <span class="n10-clr"><?php echo wp_kses_post($cats_show); ?></span>
                         </div>
                         <div class="single-project-item wow fadeInUp" data-wow-delay="0.7s">
-                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Share Now', 'heartly'); ?></span>
+                            <span class="fw-mid fs-six black-clr mb-0 d-block"><?php echo esc_html__('Share Now', 'kidzu'); ?></span>
                             <ul class="d-center justify-content-start gap-3 social-area mt-2 porfotio-social">
                                 <?php
                                 // Get the current URL
@@ -89,7 +89,7 @@ $quote_title = get_post_meta(get_the_ID(), 'quote_title', true);
             </div>
             <?php if (!empty($video_url_field) && !empty($video_thumbnail)) : ?>
                 <div class="portfolio-diversifed d-center position-relative w-100 mb-xxl-6 mb-xl-5 mb-lg-4 mb-3 wow fadeInUp" data-wow-delay=".5s">
-                    <img src="<?php echo esc_url($video_thumbnail); ?>" alt="<?php esc_attr__('Thumbnail', 'heartly'); ?>" class="w-100">
+                    <img src="<?php echo esc_url($video_thumbnail); ?>" alt="<?php esc_attr__('Thumbnail', 'kidzu'); ?>" class="w-100">
                     <a href="<?php echo esc_url($video_url_field); ?>" class="portfolio-video rounded-circle d-center popup-video">
                         <i class="fa-solid fa-play"></i>
                     </a>
@@ -100,7 +100,7 @@ $quote_title = get_post_meta(get_the_ID(), 'quote_title', true);
             </p>
             <?php if (!empty($quote_title) && !empty($quoute_img)) : ?>
                 <div class="mb-xxl-12 mb-xl-10 mb-lg-9 mb-md-7 mb-sm-5 mb-2 text-center wow fadeInUp" data-wow-delay=".4s">
-                    <img src="<?php echo esc_url($quoute_img); ?>" alt="<?php esc_attr__('Quote', 'heartly'); ?>" class="mb-4">
+                    <img src="<?php echo esc_url($quoute_img); ?>" alt="<?php esc_attr__('Quote', 'kidzu'); ?>" class="mb-4">
                     <h4 class="black-clr">
                         <?php echo wp_kses_post($quote_title); ?>
                     </h4>

@@ -51,7 +51,7 @@ if (is_active_sidebar('sidebar-service')) {
                                             </a>
                                         </div>
                                         <div class="writing-content">
-                                            <a href="<?php echo esc_url($url_next) ?>"><span><?php echo esc_html__('Previous', 'heartly'); ?></span>
+                                            <a href="<?php echo esc_url($url_next) ?>"><span><?php echo esc_html__('Previous', 'kidzu'); ?></span>
                                                 <h6 class="title"><?php echo esc_html($title); ?></h6>
                                             </a>
                                         </div>
@@ -64,7 +64,7 @@ if (is_active_sidebar('sidebar-service')) {
                                 <?php if ($previous_post): ?>
                                     <div class="right-icon-area single">
                                         <div class="writing-content">
-                                            <a href="<?php echo esc_url($url_previous) ?>"><span><?php echo esc_html__('Next', 'heartly'); ?></span>
+                                            <a href="<?php echo esc_url($url_previous) ?>"><span><?php echo esc_html__('Next', 'kidzu'); ?></span>
                                                 <h6 class="title">
                                                     <?php echo esc_html($title); ?>
                                                 </h6>

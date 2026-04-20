@@ -1,9 +1,9 @@
 <?php
-function heartly_widgets_init() {
+function kidzu_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Default Sidebar', 'heartly' ),
+		'name'          => esc_html__( 'Default Sidebar', 'kidzu' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'heartly' ),
+		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'kidzu' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -12,9 +12,9 @@ function heartly_widgets_init() {
 
 	
 	register_sidebar( array(
-		'name'          => esc_html__( 'Service Sidebar', 'heartly' ),
+		'name'          => esc_html__( 'Service Sidebar', 'kidzu' ),
 		'id'            => 'sidebar-service',
-		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'heartly' ),
+		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'kidzu' ),
 		'before_widget' => '<div id="%1$s" class="widget common__item %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -22,9 +22,9 @@ function heartly_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Portfolio Sidebar', 'heartly' ),
+		'name'          => esc_html__( 'Portfolio Sidebar', 'kidzu' ),
 		'id'            => 'sidebar-portfolio',
-		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'heartly' ),
+		'description'   => esc_html__( 'This is sidebar area for blog post and single post.', 'kidzu' ),
 		'before_widget' => '<div id="%1$s" class="widget common__item %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -33,9 +33,9 @@ function heartly_widgets_init() {
 
 	if(class_exists('WooCommerce')): 
 		register_sidebar( array(
-			'name'          => esc_html__( 'WooCommerce Sidebar', 'heartly' ),
+			'name'          => esc_html__( 'WooCommerce Sidebar', 'kidzu' ),
 			'id'            => 'shop',
-			'description'   => esc_html__( 'This is sidebar area for woocommerces shop page.', 'heartly' ),
+			'description'   => esc_html__( 'This is sidebar area for woocommerces shop page.', 'kidzu' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -44,4 +44,4 @@ function heartly_widgets_init() {
 	endif;
 			
 }
-add_action( 'widgets_init', 'heartly_widgets_init' );
+add_action( 'widgets_init', 'kidzu_widgets_init' );

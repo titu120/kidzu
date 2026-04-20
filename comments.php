@@ -13,13 +13,13 @@ if ( post_password_required() ) {
 				if ( 1 === $comment_count ) {
 					printf(
 						/* translators: 1: title. */
-						esc_html__( 'One comments on &ldquo;%1$s&rdquo;', 'heartly' ),
+						esc_html__( 'One comments on &ldquo;%1$s&rdquo;', 'kidzu' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
 					printf( // WPCS: XSS OK.
 						/* translators: 1: comment count number, 2: title. */
-						esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'heartly' ) ),
+						esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'kidzu' ) ),
 						number_format_i18n( $comment_count ),
 						'<span>' . get_the_title() . '</span>'
 					);
@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 		<?php the_comments_navigation();
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html__( 'Comments are closed.', 'heartly' ); ?></p>
+			<p class="no-comments"><?php esc_html__( 'Comments are closed.', 'kidzu' ); ?></p>
 		<?php
 		endif;
 	endif; // Check for have_comments().

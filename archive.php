@@ -11,10 +11,10 @@ get_header(); ?>
         $column      =''; 
         $blog_grid   ='';
 
-        if(!empty($heartly_option['blog-layout']) || !is_active_sidebar( 'sidebar-1' )){
+        if(!empty($kidzu_option['blog-layout']) || !is_active_sidebar( 'sidebar-1' )){
 
-            $blog_layout = !empty($heartly_option['blog-layout']) ? $heartly_option['blog-layout'] : '';
-            $blog_grid   =  !empty($heartly_option['blog-grid']) ? $heartly_option['blog-grid'] : '';
+            $blog_layout = !empty($kidzu_option['blog-layout']) ? $kidzu_option['blog-layout'] : '';
+            $blog_grid   =  !empty($kidzu_option['blog-grid']) ? $kidzu_option['blog-grid'] : '';
             $blog_grid   = !empty($blog_grid) ? $blog_grid : '12';
             if($blog_layout == 'full' || !is_active_sidebar( 'sidebar-1' ))
             {
@@ -75,13 +75,13 @@ get_header(); ?>
                                     <div class="full-blog-content">
                                         <div class="user-info">
                                             <!-- single info -->
-                                            <?php if (!empty($heartly_option['blog-author-post'])) {
-                                            if ($heartly_option['blog-author-post'] == 'show') : ?>
+                                            <?php if (!empty($kidzu_option['blog-author-post'])) {
+                                            if ($kidzu_option['blog-author-post'] == 'show') : ?>
                                                 <div class="single-info">
                                                     <span>
                                                         <i class="tp tp-circle-user-regular"></i>
                                                         <?php
-                                                        echo esc_html__('by', 'heartly');
+                                                        echo esc_html__('by', 'kidzu');
                                                         $last_name = get_user_meta($author_id, 'last_name', true);
                                                         $first_name = get_user_meta($author_id, 'first_name', true);
                                                         if (!empty($first_name) && !empty($last_name)) {
@@ -97,7 +97,7 @@ get_header(); ?>
                                                     <span>
                                                         <i class="tp tp-circle-user-regular"></i>
                                                         <?php
-                                                        echo esc_html__('by', 'heartly');
+                                                        echo esc_html__('by', 'kidzu');
                                                         $last_name = get_user_meta($author_id, 'last_name', true);
                                                         $first_name = get_user_meta($author_id, 'first_name', true);
                                                         if (!empty($first_name) && !empty($last_name)) {
@@ -112,7 +112,7 @@ get_header(); ?>
                                             
                                             <!-- single infoe end -->
                                             <!-- single info -->
-                                            <?php if(!empty($heartly_option['blog-date'])) :?>
+                                            <?php if(!empty($kidzu_option['blog-date'])) :?>
                                                 <div class="single-info">
                                                     <i class="tp tp-clock-regular"></i>
                                                     <span><?php echo get_the_date();?></span>
@@ -122,8 +122,8 @@ get_header(); ?>
                                             <!-- single info -->
                                             <div class="single-info cat">
                                                 
-                                                <span> <?php if(!empty($heartly_option['blog-category'])){
-                                                    if($heartly_option['blog-category'] == 'show'){ ?>
+                                                <span> <?php if(!empty($kidzu_option['blog-category'])){
+                                                    if($kidzu_option['blog-category'] == 'show'){ ?>
                                                     <i class="tp tp-tags"></i> <?php
                                                         if(get_the_category()):
                                                             the_category(', ');                                                 
@@ -162,14 +162,14 @@ get_header(); ?>
                                     </div>
 
                                         <div class="blog-desc">   
-                                            <?php echo heartly_custom_excerpt(30);?>                                     
+                                            <?php echo kidzu_custom_excerpt(30);?>                                     
                                         </div>                                     
                                         <?php                                     
                                             
-                                            if(!empty($heartly_option['blog_readmore'])):?>
+                                            if(!empty($kidzu_option['blog_readmore'])):?>
                                                 <div class="blog-button">
                                                     <a href="<?php the_permalink();?>">
-                                                        <?php echo esc_html($heartly_option['blog_readmore']); ?> <i class="tp-arrow-right n0-color"></i>
+                                                        <?php echo esc_html($kidzu_option['blog_readmore']); ?> <i class="tp-arrow-right n0-color"></i>
                                                     </a>
                                                 </div>
                                         <?php endif; ?>

@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'heartly_setup' ) ) :
+if ( ! function_exists( 'kidzu_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -11,14 +11,14 @@ if ( ! function_exists( 'heartly_setup' ) ) :
 
 
 
-function heartly_setup() {
+function kidzu_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on heartly, use a find and replace
-	 * to change 'heartly' to the name of your theme in all the template files.
+	 * If you're building a theme based on kidzu, use a find and replace
+	 * to change 'kidzu' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'heartly', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'kidzu', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -41,7 +41,7 @@ function heartly_setup() {
 	});
 	
 
-	function heartly_change_excerpt( $text )
+	function kidzu_change_excerpt( $text )
 	{
 		$pos = strrpos( $text, '[');
 		if ($pos === false)
@@ -51,11 +51,11 @@ function heartly_setup() {
 		
 		return rtrim (substr($text, 0, $pos) ) . '...';
 	}
-	add_filter('get_the_excerpt', 'heartly_change_excerpt');
+	add_filter('get_the_excerpt', 'kidzu_change_excerpt');
 
 
 	// Limit Excerpt Length by number of Words
-	function heartly_custom_excerpt( $limit ) {
+	function kidzu_custom_excerpt( $limit ) {
 		$excerpt = explode(' ', get_the_excerpt(), $limit);
 		if (count($excerpt)>=$limit) {
 		array_pop($excerpt);
@@ -89,8 +89,8 @@ function heartly_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary Menu', 'heartly' ),		
-		'menu-2' => esc_html__( 'Single Menu', 'heartly' ),
+		'menu-1' => esc_html__( 'Primary Menu', 'kidzu' ),		
+		'menu-2' => esc_html__( 'Single Menu', 'kidzu' ),
 		
 	) );
 	/*
@@ -107,7 +107,7 @@ function heartly_setup() {
 	
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'heartly_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'kidzu_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -145,13 +145,13 @@ function heartly_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'heartly_setup' );
+add_action( 'after_setup_theme', 'kidzu_setup' );
 
 function my_theme_register_block_patterns() {
     register_block_pattern( 'my-theme/my-pattern', array(
-        'title'       => __( 'My Pattern', 'heartly' ),
-        'description' => _x( 'A custom pattern for my theme.', 'Block pattern description', 'heartly' ),
-        'content'     => "<!-- wp:paragraph --><p>" . __( 'Hello world!', 'heartly' ) . "</p><!-- /wp:paragraph -->",
+        'title'       => __( 'My Pattern', 'kidzu' ),
+        'description' => _x( 'A custom pattern for my theme.', 'Block pattern description', 'kidzu' ),
+        'content'     => "<!-- wp:paragraph --><p>" . __( 'Hello world!', 'kidzu' ) . "</p><!-- /wp:paragraph -->",
     ));
 }
 add_action( 'init', 'my_theme_register_block_patterns' );
@@ -159,7 +159,7 @@ add_action( 'init', 'my_theme_register_block_patterns' );
 function my_theme_register_block_styles() {
     register_block_style( 'core/quote', array(
         'name'  => 'fancy-quote',
-        'label' => __( 'Fancy Quote', 'heartly' ),
+        'label' => __( 'Fancy Quote', 'kidzu' ),
     ));
 }
 add_action( 'init', 'my_theme_register_block_styles' );
@@ -167,12 +167,12 @@ add_action( 'init', 'my_theme_register_block_styles' );
 /**
 *Custom Image Size
 */
-add_image_size( 'heartly-team-slider', 358, 415, true );
-add_image_size( 'heartly-portfolio-slider', 648, 500, true );
-add_image_size( 'heartly-portfolio-slider-2', 800, 510, true );
-add_image_size( 'heartly-blog-slider', 420, 365, true );
-add_image_size( 'heartly-portfolio-grid', 600, 700, true );
-add_image_size( 'heartly-blog-sideabr', 87, 87, true );
+add_image_size( 'kidzu-team-slider', 358, 415, true );
+add_image_size( 'kidzu-portfolio-slider', 648, 500, true );
+add_image_size( 'kidzu-portfolio-slider-2', 800, 510, true );
+add_image_size( 'kidzu-blog-slider', 420, 365, true );
+add_image_size( 'kidzu-portfolio-grid', 600, 700, true );
+add_image_size( 'kidzu-blog-sideabr', 87, 87, true );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -181,10 +181,10 @@ add_image_size( 'heartly-blog-sideabr', 87, 87, true );
  *
  * @global int $content_width
  */
-function heartly_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'heartly_content_width', 640 );
+function kidzu_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'kidzu_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'heartly_content_width', 0 );
+add_action( 'after_setup_theme', 'kidzu_content_width', 0 );
 
 
 /**
@@ -234,7 +234,7 @@ if ( ! class_exists( 'reduxNewsflash' ) ):
     }
 endif;
 
-function heartly_remove_demo_mode_link() { // Be sure to rename this function to something more unique
+function kidzu_remove_demo_mode_link() { // Be sure to rename this function to something more unique
     if ( class_exists('ReduxFrameworkPlugin') ) {
         remove_action( 'plugin_row_meta', array( ReduxFrameworkPlugin::get_instance(), 'plugin_metalinks'), null, 2 );
     }
@@ -242,43 +242,43 @@ function heartly_remove_demo_mode_link() { // Be sure to rename this function to
         remove_action('admin_notices', array( ReduxFrameworkPlugin::get_instance(), 'admin_notices' ) );    
     }
 }
-add_action('init', 'heartly_remove_demo_mode_link');
+add_action('init', 'kidzu_remove_demo_mode_link');
 
 /**
  * Registers an editor stylesheet for the theme.
  */
-function heartly_theme_add_editor_styles() {
+function kidzu_theme_add_editor_styles() {
     add_editor_style( 'css/custom-editor-style.css' );
 }
-add_action( 'admin_init', 'heartly_theme_add_editor_styles' );
+add_action( 'admin_init', 'kidzu_theme_add_editor_styles' );
 
 
 //------------------------------------------------------------------------
 //Organize Comments form field
 //-----------------------------------------------------------------------
-function heartly_wpb_move_comment_field_to_bottom( $fields ) {
+function kidzu_wpb_move_comment_field_to_bottom( $fields ) {
 	$comment_field = $fields['comment'];
 	unset( $fields['comment'] );
 	$fields['comment'] = $comment_field;
 	return $fields;
 }
 
-add_filter( 'comment_form_fields', 'heartly_wpb_move_comment_field_to_bottom' );	
+add_filter( 'comment_form_fields', 'kidzu_wpb_move_comment_field_to_bottom' );	
 
 
 //adding placeholder text for comment form
 
-function heartly_comment_textarea_placeholder( $args ) {
+function kidzu_comment_textarea_placeholder( $args ) {
 	$args['comment_field']        = str_replace( '<textarea', '<textarea placeholder="Comment"', $args['comment_field'] );
 	return $args;
 }
-add_filter( 'comment_form_defaults', 'heartly_comment_textarea_placeholder' );
+add_filter( 'comment_form_defaults', 'kidzu_comment_textarea_placeholder' );
 
 /**
  * Comment Form Fields Placeholder
  *
  */
-function heartly_comment_form_fields( $fields ) {
+function kidzu_comment_form_fields( $fields ) {
 	foreach( $fields as &$field ) {
 		$field = str_replace( 'id="author"', 'id="author" placeholder="Name*"', $field );
 		$field = str_replace( 'id="email"', 'id="email" placeholder="Email*"', $field );
@@ -286,7 +286,7 @@ function heartly_comment_form_fields( $fields ) {
 	}
 	return $fields;
 }
-add_filter( 'comment_form_default_fields', 'heartly_comment_form_fields' );
+add_filter( 'comment_form_default_fields', 'kidzu_comment_form_fields' );
 
 
 //customize archive tilte
@@ -301,15 +301,15 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
-add_filter( 'get_the_archive_title', 'heartly_archive_title_remove_prefix' );
-function heartly_archive_title_remove_prefix( $title ) {
+add_filter( 'get_the_archive_title', 'kidzu_archive_title_remove_prefix' );
+function kidzu_archive_title_remove_prefix( $title ) {
 	if ( is_post_type_archive() ) {
 		$title = post_type_archive_title( '', false );
 	}
 	return $title;
 }
 
-function heartly_menu_add_description_to_menu($item_output, $item, $depth, $args) {
+function kidzu_menu_add_description_to_menu($item_output, $item, $depth, $args) {
 
    if (strlen($item->description) > 0 ) {
       // append description after link
@@ -318,27 +318,27 @@ function heartly_menu_add_description_to_menu($item_output, $item, $depth, $args
    }   
    return $item_output;
 }
-add_filter('walker_nav_menu_start_el', 'heartly_menu_add_description_to_menu', 10, 4);
+add_filter('walker_nav_menu_start_el', 'kidzu_menu_add_description_to_menu', 10, 4);
 
-add_filter('wp_list_categories', 'heartly_cat_count_span');
-function heartly_cat_count_span($links) {
+add_filter('wp_list_categories', 'kidzu_cat_count_span');
+function kidzu_cat_count_span($links) {
   $links = str_replace('</a> (', '</a> <span>(', $links);
   $links = str_replace(')', ')</span>', $links);
   return $links;
 }
 
-function heartly_style_the_archive_count($links) {
+function kidzu_style_the_archive_count($links) {
     $links = str_replace('</a>&nbsp;(', '</a> <span class="archiveCount">(', $links);
     $links = str_replace(')', ')</span>', $links);
     return $links;
 }
 
-add_filter('get_archives_link', 'heartly_style_the_archive_count');
+add_filter('get_archives_link', 'kidzu_style_the_archive_count');
 
 /**
  * Post title array
  */
-function heartly_get_postTitleArray($postType = 'post' ){
+function kidzu_get_postTitleArray($postType = 'post' ){
     $post_type_query  = new WP_Query(
         array (
             'post_type'      => $postType,
@@ -353,7 +353,7 @@ function heartly_get_postTitleArray($postType = 'post' ){
     if ( is_array($posts_array) ) {
         $post_title_array = wp_list_pluck($posts_array, 'post_title', 'ID' );
     } else {
-        $post_title_array['default'] = esc_html__( 'Default', 'heartly' );
+        $post_title_array['default'] = esc_html__( 'Default', 'kidzu' );
     }
     return $post_title_array;
 }
@@ -382,11 +382,11 @@ function woo_remove_actions() {
 // dynamic color support starting
 function upsoft_site_custom_color()
 {
-	global $heartly_option;
-	$site_color       = !empty($heartly_option['primary_color']) ? $heartly_option['primary_color'] : '#3368C6';
-	$secondary_color  = !empty($heartly_option['secondary_color']) ? $heartly_option['secondary_color'] : '#0F604D';
-	$input_bg_color  = !empty($heartly_option['input_bg_color']) ? $heartly_option['input_bg_color'] : '#E6F7F1';
-	$hover_color  = !empty($heartly_option['link_hover_text_color']) ? $heartly_option['link_hover_text_color'] : '#EF6820';
+	global $kidzu_option;
+	$site_color       = !empty($kidzu_option['primary_color']) ? $kidzu_option['primary_color'] : '';
+	$secondary_color  = !empty($kidzu_option['secondary_color']) ? $kidzu_option['secondary_color'] : '';
+	$input_bg_color  = !empty($kidzu_option['input_bg_color']) ? $kidzu_option['input_bg_color'] : '';
+	$hover_color  = !empty($kidzu_option['link_hover_text_color']) ? $kidzu_option['link_hover_text_color'] : '';
     // Primary Color
     $custom_css = '';
     if ($site_color != '') {
@@ -416,7 +416,7 @@ function upsoft_site_custom_color()
     // Enqueue and add inline styles for Primary Color
     wp_register_style('site-custom', false);
     wp_enqueue_style('site-custom', false);
-    wp_add_inline_style('site-custom', $custom_css, true);
+    wp_add_inline_style('site-custom', $custom_css);
 
 }
 add_action('wp_enqueue_scripts', 'upsoft_site_custom_color');

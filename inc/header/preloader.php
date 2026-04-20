@@ -1,23 +1,23 @@
 <?php 
-global $heartly_option;
+global $kidzu_option;
 $preloader_img = "";
-if(!empty($heartly_option['show_preloader']))
+if(!empty($kidzu_option['show_preloader']))
   {
-    $loading = $heartly_option['show_preloader'];
+    $loading = $kidzu_option['show_preloader'];
     
-    if(!empty($heartly_option['preloader_img'])){
-        $preloader_img = $heartly_option['preloader_img'];
+    if(!empty($kidzu_option['preloader_img'])){
+        $preloader_img = $kidzu_option['preloader_img'];
     }
 
     if($loading == 1){
       if(empty($preloader_img['url'])):
       ?>
-      <div id="heartly-load">  
+      <div id="kidzu-load">  
         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
       </div>  
         
         <?php else: ?>
-            <div id="heartly-load">                
+            <div id="kidzu-load">                
                 <div class="loader-container">
                     <div class='loader-icon'><img src="<?php echo esc_url($preloader_img['url']);?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></div>
                 </div>                            
@@ -27,8 +27,8 @@ if(!empty($heartly_option['show_preloader']))
 }?>
 
 <?php 
-    if(!empty($heartly_option['off_sticky'])):   
-        $sticky = $heartly_option['off_sticky'];         
+    if(!empty($kidzu_option['off_sticky'])):   
+        $sticky = $kidzu_option['off_sticky'];         
         if($sticky == 1):
             $sticky_menu ='menu-sticky';        
         endif;

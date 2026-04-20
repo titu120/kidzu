@@ -3,7 +3,7 @@
     <?php		
 	the_content();
 	wp_link_pages( array(
-		'before' => '<div class="page-links"> <div class="pagination-pages">' . esc_html__( 'Pages:', 'heartly' ),
+		'before' => '<div class="page-links"> <div class="pagination-pages">' . esc_html__( 'Pages:', 'kidzu' ),
 		'after'  => '</div></div>',
 		'link_before' => '<span class="page-number">',
 		'link_after'  => '</span>',
@@ -24,7 +24,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'heartly' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'kidzu' ),
 							array(
 								'span' => array(
 									'class' => array(),

@@ -1,16 +1,16 @@
 /*
-Theme Name: heartly
-Theme URI: https://pixelaxis.net//heartly
-Author: Pixelaxis
-Author URI: https://themeforest.net/user/pixelaxis/portfolio
-Description: heartly - Finance & Business Consulting Elementor WordPress Theme
+Theme Name: kidzu
+Theme URI: https://pixelaxis.net//kidzu
+Author: Gramentheme
+Author URI: https://themeforest.net/user/gramentheme
+Description: Kidzu - Kindergarten & School WordPress Theme
 Requires at least: 4.9
-Tested up to: 6.5
+Tested up to: 6.8
 Requires PHP: 7.0
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: heartly
+Text Domain: kidzu
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, portfolio
 */
 
@@ -375,9 +375,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background: #ffffff;
-}
 
 blockquote:after,
 q:before,
@@ -397,7 +394,7 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul,
+
 ol,
 ol ol,
 ol ul,

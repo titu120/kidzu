@@ -1,11 +1,11 @@
 <?php
-    global $heartly_option;    
+    global $kidzu_option;    
 
     $header_width_meta = get_post_meta(get_the_ID(), 'header_width_custom', true);
     if ($header_width_meta != ''){
         $header_width = ( $header_width_meta == 'full' ) ? 'container-fluid': 'container';
     }else{
-        $header_width = !empty($heartly_option['header-grid']) ? $heartly_option['header-grid'] : '';
+        $header_width = !empty($kidzu_option['header-grid']) ? $kidzu_option['header-grid'] : '';
         $header_width = ( $header_width == 'full' ) ? 'container-fluid': 'container';
     }
     
@@ -15,8 +15,8 @@
         <div class="copyright_border">
             
             <div class="copyright text-center" <?php if(!empty( $copy_space)): ?> style="padding: <?php echo esc_attr($copy_space); ?>" <?php endif; ?> >
-                <?php if(!empty($heartly_option['copyright'])){?>
-                <p><?php echo wp_kses($heartly_option['copyright'], 'heartly'); ?></p>
+                <?php if(!empty($kidzu_option['copyright'])){?>
+                <p><?php echo wp_kses($kidzu_option['copyright'], 'kidzu'); ?></p>
                 <?php }
                  else{
                     ?>

@@ -1,63 +1,11 @@
-/**
-*
-* -----------------------------------------------------------------------------
-*Theme Name: heartly
-Theme URI: https://pixelaxis.net/heartly
-Author: Pixelaxis
-Author URI: https://themeforest.net/user/pixelaxis/portfolio
-Description: heartly - Finance & Business Consulting Elementor WordPress Theme
-Requires at least: 4.9
-Tested up to: 6.5
-Requires PHP: 7.0
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: heartly
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, portfolio
-*
-* -----------------------------------------------------------------------------
-*
-**/
-/* Table Of Content
----------------------------------------------------------
-01. General CSS
-02. Global Class
-03. Header Section 
-04. Sticky Menu
-05. Slider Section
-06. About Us
-07. Services
-08. Calltoaction
-09. Portfolio
-10. Pricing Tables
-11. Team Member
-12. Newsletter
-13. Testimonial
-15. Contact Us
-16. Footer
-17. Scroll Up
-18. Video
-19. Counter up
-20. Breadcrumbs
-21. Portfolio Details
-25. Home Banner
-26. Preloader
-27. FAQ 
---------------------------------------------------------*/
-/* ///////////////////////////////////////////////////////////
-Responsive Layout Declaration 
-/////////////////////////////////////////////////////////// */
 :root {
-  --bodyFont: "Outfit", sans-serif;
-  --titleFont: "Outfit", sans-serif;
-  --primaryColor: #01A66B;
-  --secondaryColor: #005651;
-  --bodyColor: #4B655C;
+  --primaryColor: #F39F5F;
+  --secondaryColor: #F39F5F;
+  --bodyColor: #5C707E;
   --whiteColor: #FFFFFF;
   --blackColor: #000000;
   --titleColor: #1C1E30;
-  --borderColor: #CDE4DC;
-  --inputbgColor: #E6F7F1;
+  --borderColor: #385469;
   --softbgColor: #ECFFFC;
   --transition: 0.4s all ease;
 }
@@ -916,7 +864,7 @@ div.wpcf7-acceptance-missing {
 }
 .themephi-blog .blog-item .blog-button a {
   padding: 17px 33px;
-  font-family: var(--titleFont);
+  
   line-height: 1;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -1121,7 +1069,7 @@ body.archive .themephi-blog .blog-item {
 .wp-block-pullquote cite {
   color: var(--bodyColor);
   font-size: 16px;
-  font-family: var(--bodyFont);
+  
 }
 
 iframe[title="VideoPress Video Player"] {
@@ -1161,7 +1109,7 @@ body .wp-block-quote.is-style-large:not(.is-style-plain) p {
   font-size: 24px;
   line-height: 1.5;
   font-weight: 600;
-  font-family: var(--titleFont);
+  
   margin-bottom: 15px;
 }
 blockquote p a,
@@ -1212,7 +1160,7 @@ body .wp-block-pullquote blockquote, body .wp-block-pullquote cite, body .wp-blo
   clear: both;
   padding: 20px 0 0px;
   color: var(--titleColor);
-  font-family: var(--titleFont);
+  
   font-weight: 700;
   font-size: 18px;
 }
@@ -1222,7 +1170,7 @@ body .wp-block-pullquote blockquote, body .wp-block-pullquote cite, body .wp-blo
   line-height: 27px;
   height: 31px;
   padding: 0px 10px;
-  font-family: var(--titleFont);
+  
   font-size: 14px !important;
   transition: all 0.3s ease;
   font-weight: 500 !important;
@@ -1343,7 +1291,7 @@ body .wp-block-pullquote blockquote, body .wp-block-pullquote cite, body .wp-blo
   position: relative;
   line-height: 30px;
   color: var(--titleColor);
-  font-family: var(--titleFont);
+  
   font-weight: 600;
 }
 .themephi-blog-details .author-block .author-title:after {
@@ -1373,7 +1321,7 @@ body .wp-block-pullquote blockquote, body .wp-block-pullquote cite, body .wp-blo
 }
 .themephi-blog-details #reply-title {
   font-size: 30px;
-  font-family: var(--titleFont);
+  
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 0px;
@@ -1995,7 +1943,7 @@ li.comment #respond {
 .themephi-sideabr .widget_block h2,
 .themephi-sideabr .widget-title {
   color: var(--titleColor);
-  font-family: var(--titleFont);
+  
   position: relative;
   font-size: 24px;
   line-height: 26px;
@@ -2308,7 +2256,7 @@ li.comment #respond {
   color: var(--bodyColor);
   transition: var(--transition);
   font-size: 16px;
-  font-family: var(--titleFont);
+  
   font-weight: 600;
   position: relative;
 }
@@ -2336,7 +2284,7 @@ li.comment #respond {
   font-weight: 500;
   color: var(--bodyColor);
   font-size: 14px !important;
-  font-family: var(--bodyFont);
+  
   border-radius: 3px;
 }
 .themephi-sideabr .tagcloud a:hover {
@@ -3136,7 +3084,7 @@ li.hide-firsts > a {
   padding: 5px 20px;
   color: var(--titleColor);
   font-weight: 500;
-  font-family: var(--bodyFont);
+  
   margin: 0 0;
   transition: all 0.3s;
 }
@@ -4694,7 +4642,7 @@ figure.gallery-item:hover .gallery-icon a img {
   font-size: 16px;
   line-height: 24px;
   color: var(--bodyColor);
-  font-family: var(--titleFont);
+  
   transition: 0.3s;
 }
 .single-teams .adress-box .address-content h5 {
@@ -4720,19 +4668,9 @@ figure.gallery-item:hover .gallery-icon a img {
 /* -----------------------------------
     01. General CSS
 -------------------------------------*/
-html,
-body {
-  font-size: 16px;
-  color: var(--bodyColor);
-  font-family: var(--bodyFont);
-  vertical-align: baseline;
-  line-height: 1.6;
-  font-weight: 400;
-}
 
-.my-custom-font {
-  font-family: var(--bodyFont) !important;
-}
+
+
 .my-custom-font .bottom-shape {
   font-weight: 100 !important;
 }
@@ -4746,9 +4684,21 @@ body {
   color: var(--whiteColor) !important;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.bg-shape img{
+  max-width: unset !important;
+}
+.radius-shape img{
+  max-width: unset !important;
+}
+
+
+
+.post-items .thumb img {
+  border-radius: 50%;
+}
+
+.border-shape-1 img{
+  max-width: unset !important;
 }
 
 p {
@@ -4761,7 +4711,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--titleFont);
+  
   color: var(--titleColor);
   margin: 0 0 0;
   font-weight: 700;
@@ -5105,12 +5055,6 @@ span.yellow {
   overflow: visible !important;
 }
 
-input[type=checkbox],
-input[type=radio] {
-  margin-right: 8px;
-  vertical-align: text-top;
-  margin-top: 0;
-}
 
 .sticky .menu-area {
   padding: 0;
@@ -5185,6 +5129,9 @@ ul.check-square li:before {
   font-family: "FontAwesome";
   color: var(--secondaryColor);
   font-size: 20px;
+}
+.hero-line img{
+  max-width: unset !important;
 }
 
 .single-post .themephi-order-list {
@@ -5271,7 +5218,7 @@ code {
   display: inline-block;
   text-transform: capitalize;
   font-size: 16px;
-  font-family: var(--bodyFont);
+  
   font-weight: 500;
   color: var(--whiteColor);
   background: var(--secondaryColor);
@@ -5282,9 +5229,7 @@ code {
   opacity: 0.9;
 }
 
-input[type=submit]:hover {
-  opacity: 0.9;
-}
+
 
 .themephi-porfolio-details .project-desc {
   padding-top: 0px;
@@ -5567,7 +5512,7 @@ a:active {
   padding: 12px 0;
   display: block;
   color: var(--titleColor);
-  font-family: var(--bodyFont);
+  
   line-height: 25px;
   font-weight: 600 !important;
   border-bottom: 1px solid rgba(75, 101, 92, 0.168627451);
@@ -5999,7 +5944,7 @@ a:active {
 /*-------------------------
     33.Preloader CSS
 ---------------------------*/
-#heartly-load {
+#kidzu-load {
   position: fixed;
   top: 0;
   left: 0;
@@ -6008,7 +5953,7 @@ a:active {
   background-color: var(--blackColor);
   z-index: 999999;
 }
-#heartly-load .lds-ring {
+#kidzu-load .lds-ring {
   display: inline-block;
   position: relative;
   width: 40px;
@@ -6017,7 +5962,7 @@ a:active {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#heartly-load .lds-ring div {
+#kidzu-load .lds-ring div {
   border-color: var(--primaryColor) transparent transparent transparent;
   box-sizing: border-box;
   display: block;
@@ -6030,13 +5975,13 @@ a:active {
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: var(--whiteColor) transparent transparent transparent;
 }
-#heartly-load .lds-ring div:nth-child(1) {
+#kidzu-load .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
 }
-#heartly-load .lds-ring div:nth-child(2) {
+#kidzu-load .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
 }
-#heartly-load .lds-ring div:nth-child(3) {
+#kidzu-load .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
 
@@ -6193,7 +6138,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
   transition: 0.3s;
   line-height: 10px;
   text-transform: capitalize;
-  font-family: var(--titleFont);
+  
   height: 50px;
   padding: 20px 18px !important;
 }
@@ -6287,7 +6232,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 
 /*
   ##################################################################################################################################################################
-   Extra Portfolio Details CSS fon only heartly theme 
+   Extra Portfolio Details CSS fon only kidzu theme 
   ###################################################################################################################################################################
   */
 .zq_section-subtitle {
@@ -6310,7 +6255,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 
 .zq_section-text {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 400;
   line-height: 1.77;
@@ -6354,7 +6299,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 }
 .zq_portfolio_details-info-item span {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -6363,7 +6308,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 }
 .zq_portfolio_details-info-item p {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -6378,7 +6323,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 
 .zq_team_details-content-subtitle {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -6400,7 +6345,6 @@ body.logged-in .cart-icon-total-products.visible-cart {
 
 .zq_team_details-content-text {
   color: var(--bodyColor);
-  font-family: var(--bodyColor);
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -6429,7 +6373,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 .zq_team_details-contact-item span {
   display: block;
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -6437,7 +6381,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 .zq_team_details-contact-item p {
   display: block;
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -6447,7 +6391,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 .zq_team_details-contact-item a {
   display: block;
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -6461,7 +6405,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 
 .zq_skill-content-text {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -6489,7 +6433,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 }
 .zq_skill-content-progress .progress-title span {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -6497,7 +6441,7 @@ body.logged-in .cart-icon-total-products.visible-cart {
 }
 .zq_skill-content-progress .progress-title p {
   color: var(--bodyColor);
-  font-family: var(--bodyFont);
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

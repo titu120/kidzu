@@ -2,27 +2,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses heartly_header_style()
+ * @uses kidzu_header_style()
  */
-function heartly_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'heartly_custom_header_args', array(
+function kidzu_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'kidzu_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'heartly_header_style',
+		'wp-head-callback'       => 'kidzu_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'heartly_custom_header_setup' );
+add_action( 'after_setup_theme', 'kidzu_custom_header_setup' );
 
-if ( ! function_exists( 'heartly_header_style' ) ) :
+if ( ! function_exists( 'kidzu_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see heartly_custom_header_setup().
+ * @see kidzu_custom_header_setup().
  */
-function heartly_header_style() {
+function kidzu_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

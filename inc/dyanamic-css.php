@@ -3,121 +3,121 @@
 dynamic css file. please don't edit it. it's update automatically when settins changed
 */
 
-add_action('wp_head', 'heartly_custom_colors', 160);
-function heartly_custom_colors()
+add_action('wp_head', 'kidzu_custom_colors', 160);
+function kidzu_custom_colors()
 {
-	global $heartly_option;
+	global $kidzu_option;
 	/***styling options
 ------------------*/
-	if (!empty($heartly_option['body_bg_color'])) {
-		$body_bg          = $heartly_option['body_bg_color'];
+	if (!empty($kidzu_option['body_bg_color'])) {
+		$body_bg          = $kidzu_option['body_bg_color'];
 	}
 
-	$site_color       = !empty($heartly_option['primary_color']) ? $heartly_option['primary_color'] : '';
-	$secondary_color  = !empty($heartly_option['secondary_color']) ? $heartly_option['secondary_color'] : '';
-	$link_color       = !empty($heartly_option['link_text_color']) ? $heartly_option['link_text_color'] : '';
-	$link_hover_color = !empty($heartly_option['link_hover_text_color']) ? $heartly_option['link_hover_text_color'] : '';
+	$site_color       = !empty($kidzu_option['primary_color']) ? $kidzu_option['primary_color'] : '';
+	$secondary_color  = !empty($kidzu_option['secondary_color']) ? $kidzu_option['secondary_color'] : '';
+	$link_color       = !empty($kidzu_option['link_text_color']) ? $kidzu_option['link_text_color'] : '';
+	$link_hover_color = !empty($kidzu_option['link_hover_text_color']) ? $kidzu_option['link_hover_text_color'] : '';
 
 	//typography extract for body
-	$body_typography_font      = !empty($heartly_option['opt-typography-body']['font-family']) ? $heartly_option['opt-typography-body']['font-family'] : '';
-	$body_typography_font_size = !empty($heartly_option['opt-typography-body']['font-size']) ? $heartly_option['opt-typography-body']['font-size'] : '';
+	$body_typography_font      = !empty($kidzu_option['opt-typography-body']['font-family']) ? $kidzu_option['opt-typography-body']['font-family'] : '';
+	$body_typography_font_size = !empty($kidzu_option['opt-typography-body']['font-size']) ? $kidzu_option['opt-typography-body']['font-size'] : '';
 
 	//typography extract for menu
-	$menu_typography_color       = !empty($heartly_option['opt-typography-menu']['color']) ? $heartly_option['opt-typography-menu']['color'] : '';
-	$menu_typography_weight      = !empty($heartly_option['opt-typography-menu']['font-weight']) ? $heartly_option['opt-typography-menu']['font-weight'] : '';
-	$menu_typography_font_family = !empty($heartly_option['opt-typography-menu']['font-family']) ? $heartly_option['opt-typography-menu']['font-family'] : '';
-	$menu_typography_font_fsize  = !empty($heartly_option['opt-typography-menu']['font-size']) ? $heartly_option['opt-typography-menu']['font-size'] : '';
+	$menu_typography_color       = !empty($kidzu_option['opt-typography-menu']['color']) ? $kidzu_option['opt-typography-menu']['color'] : '';
+	$menu_typography_weight      = !empty($kidzu_option['opt-typography-menu']['font-weight']) ? $kidzu_option['opt-typography-menu']['font-weight'] : '';
+	$menu_typography_font_family = !empty($kidzu_option['opt-typography-menu']['font-family']) ? $kidzu_option['opt-typography-menu']['font-family'] : '';
+	$menu_typography_font_fsize  = !empty($kidzu_option['opt-typography-menu']['font-size']) ? $kidzu_option['opt-typography-menu']['font-size'] : '';
 
 	//typography extract for heading
-	$h1_typography_color = !empty($heartly_option['opt-typography-h1']['color']) ? $heartly_option['opt-typography-h1']['color'] : '';
-	if (!empty($heartly_option['opt-typography-h1']['font-weight'])) {
-		$h1_typography_weight = $heartly_option['opt-typography-h1']['font-weight'];
+	$h1_typography_color = !empty($kidzu_option['opt-typography-h1']['color']) ? $kidzu_option['opt-typography-h1']['color'] : '';
+	if (!empty($kidzu_option['opt-typography-h1']['font-weight'])) {
+		$h1_typography_weight = $kidzu_option['opt-typography-h1']['font-weight'];
 	}
 
-	$h1_typography_font_family = !empty($heartly_option['opt-typography-h1']['font-family']) ? $heartly_option['opt-typography-h1']['font-family'] : '';
-	$h1_typography_font_fsize = !empty($heartly_option['opt-typography-h1']['font-size']) ? $heartly_option['opt-typography-h1']['font-size'] : '';
+	$h1_typography_font_family = !empty($kidzu_option['opt-typography-h1']['font-family']) ? $kidzu_option['opt-typography-h1']['font-family'] : '';
+	$h1_typography_font_fsize = !empty($kidzu_option['opt-typography-h1']['font-size']) ? $kidzu_option['opt-typography-h1']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-h1']['line-height'])) {
-		$h1_typography_line_height = $heartly_option['opt-typography-h1']['line-height'];
+	if (!empty($kidzu_option['opt-typography-h1']['line-height'])) {
+		$h1_typography_line_height = $kidzu_option['opt-typography-h1']['line-height'];
 	}
 
-	$h2_typography_color = !empty($heartly_option['opt-typography-h2']['color']) ? $heartly_option['opt-typography-h2']['color'] : '';
+	$h2_typography_color = !empty($kidzu_option['opt-typography-h2']['color']) ? $kidzu_option['opt-typography-h2']['color'] : '';
 
-	$h2_typography_font_fsize = !empty($heartly_option['opt-typography-h2']['font-size']) ? $heartly_option['opt-typography-h2']['font-size'] : '';
-	if (!empty($heartly_option['opt-typography-h2']['font-weight'])) {
-		$h2_typography_font_weight = $heartly_option['opt-typography-h2']['font-weight'];
+	$h2_typography_font_fsize = !empty($kidzu_option['opt-typography-h2']['font-size']) ? $kidzu_option['opt-typography-h2']['font-size'] : '';
+	if (!empty($kidzu_option['opt-typography-h2']['font-weight'])) {
+		$h2_typography_font_weight = $kidzu_option['opt-typography-h2']['font-weight'];
 	}
 
-	$h2_typography_font_family = !empty($heartly_option['opt-typography-h2']['font-family']) ? $heartly_option['opt-typography-h2']['font-family'] : '';
+	$h2_typography_font_family = !empty($kidzu_option['opt-typography-h2']['font-family']) ? $kidzu_option['opt-typography-h2']['font-family'] : '';
 
-	$h2_typography_font_fsize = !empty($heartly_option['opt-typography-h2']['font-size']) ? $heartly_option['opt-typography-h2']['font-size'] : '';
+	$h2_typography_font_fsize = !empty($kidzu_option['opt-typography-h2']['font-size']) ? $kidzu_option['opt-typography-h2']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-h2']['line-height'])) {
-		$h2_typography_line_height = $heartly_option['opt-typography-h2']['line-height'];
+	if (!empty($kidzu_option['opt-typography-h2']['line-height'])) {
+		$h2_typography_line_height = $kidzu_option['opt-typography-h2']['line-height'];
 	}
 
-	$h3_typography_color = !empty($heartly_option['opt-typography-h3']['color']) ? $heartly_option['opt-typography-h3']['color'] : '';
+	$h3_typography_color = !empty($kidzu_option['opt-typography-h3']['color']) ? $kidzu_option['opt-typography-h3']['color'] : '';
 
-	if (!empty($heartly_option['opt-typography-h3']['font-weight'])) {
-		$h3_typography_font_weightt = $heartly_option['opt-typography-h3']['font-weight'];
+	if (!empty($kidzu_option['opt-typography-h3']['font-weight'])) {
+		$h3_typography_font_weightt = $kidzu_option['opt-typography-h3']['font-weight'];
 	}
 
-	$h3_typography_font_family = !empty($heartly_option['opt-typography-h3']['font-family']) ? $heartly_option['opt-typography-h3']['font-family'] : '';
+	$h3_typography_font_family = !empty($kidzu_option['opt-typography-h3']['font-family']) ? $kidzu_option['opt-typography-h3']['font-family'] : '';
 
-	$h3_typography_font_fsize  = !empty($heartly_option['opt-typography-h3']['font-size']) ? $heartly_option['opt-typography-h3']['font-size'] : '';
+	$h3_typography_font_fsize  = !empty($kidzu_option['opt-typography-h3']['font-size']) ? $kidzu_option['opt-typography-h3']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-h3']['line-height'])) {
-		$h3_typography_line_height = $heartly_option['opt-typography-h3']['line-height'];
+	if (!empty($kidzu_option['opt-typography-h3']['line-height'])) {
+		$h3_typography_line_height = $kidzu_option['opt-typography-h3']['line-height'];
 	}
 
-	$h4_typography_color = !empty($heartly_option['opt-typography-h4']['color']) ? $heartly_option['opt-typography-h4']['color'] : '';
+	$h4_typography_color = !empty($kidzu_option['opt-typography-h4']['color']) ? $kidzu_option['opt-typography-h4']['color'] : '';
 
-	if (!empty($heartly_option['opt-typography-h4']['font-weight'])) {
-		$h4_typography_font_weight = $heartly_option['opt-typography-h4']['font-weight'];
+	if (!empty($kidzu_option['opt-typography-h4']['font-weight'])) {
+		$h4_typography_font_weight = $kidzu_option['opt-typography-h4']['font-weight'];
 	}
 
-	$h4_typography_font_family = !empty($heartly_option['opt-typography-h4']['font-family']) ? $heartly_option['opt-typography-h4']['font-family'] : '';
+	$h4_typography_font_family = !empty($kidzu_option['opt-typography-h4']['font-family']) ? $kidzu_option['opt-typography-h4']['font-family'] : '';
 
-	$h4_typography_font_fsize  = !empty($heartly_option['opt-typography-h4']['font-size']) ? $heartly_option['opt-typography-h4']['font-size'] : '';
+	$h4_typography_font_fsize  = !empty($kidzu_option['opt-typography-h4']['font-size']) ? $kidzu_option['opt-typography-h4']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-h4']['line-height'])) {
-		$h4_typography_line_height = $heartly_option['opt-typography-h4']['line-height'];
+	if (!empty($kidzu_option['opt-typography-h4']['line-height'])) {
+		$h4_typography_line_height = $kidzu_option['opt-typography-h4']['line-height'];
 	}
 
-	$h5_typography_color = !empty($heartly_option['opt-typography-h5']['color']) ? $heartly_option['opt-typography-h5']['color'] : '';
+	$h5_typography_color = !empty($kidzu_option['opt-typography-h5']['color']) ? $kidzu_option['opt-typography-h5']['color'] : '';
 
-	if (!empty($heartly_option['opt-typography-h5']['font-weight'])) {
-		$h5_typography_font_weight = $heartly_option['opt-typography-h5']['font-weight'];
+	if (!empty($kidzu_option['opt-typography-h5']['font-weight'])) {
+		$h5_typography_font_weight = $kidzu_option['opt-typography-h5']['font-weight'];
 	}
 
-	$h5_typography_font_family = !empty($heartly_option['opt-typography-h5']['font-family']) ? $heartly_option['opt-typography-h5']['font-family'] : '';
+	$h5_typography_font_family = !empty($kidzu_option['opt-typography-h5']['font-family']) ? $kidzu_option['opt-typography-h5']['font-family'] : '';
 
-	$h5_typography_font_fsize  = !empty($heartly_option['opt-typography-h5']['font-size']) ? $heartly_option['opt-typography-h5']['font-size'] : '';
+	$h5_typography_font_fsize  = !empty($kidzu_option['opt-typography-h5']['font-size']) ? $kidzu_option['opt-typography-h5']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-h5']['line-height'])) {
-		$h5_typography_line_height = $heartly_option['opt-typography-h5']['line-height'];
+	if (!empty($kidzu_option['opt-typography-h5']['line-height'])) {
+		$h5_typography_line_height = $kidzu_option['opt-typography-h5']['line-height'];
 	}
 
-	$h6_typography_color = !empty($heartly_option['opt-typography-6']['color']) ? $heartly_option['opt-typography-6']['color'] : '';
+	$h6_typography_color = !empty($kidzu_option['opt-typography-6']['color']) ? $kidzu_option['opt-typography-6']['color'] : '';
 
-	if (!empty($heartly_option['opt-typography-6']['font-weight'])) {
-		$h6_typography_font_weight = $heartly_option['opt-typography-6']['font-weight'];
+	if (!empty($kidzu_option['opt-typography-6']['font-weight'])) {
+		$h6_typography_font_weight = $kidzu_option['opt-typography-6']['font-weight'];
 	}
 
-	$h6_typography_font_family = !empty($heartly_option['opt-typography-6']['font-family']) ? $heartly_option['opt-typography-6']['font-family'] : '';
+	$h6_typography_font_family = !empty($kidzu_option['opt-typography-6']['font-family']) ? $kidzu_option['opt-typography-6']['font-family'] : '';
 
-	$h6_typography_font_fsize  = !empty($heartly_option['opt-typography-6']['font-size']) ? $heartly_option['opt-typography-6']['font-size'] : '';
+	$h6_typography_font_fsize  = !empty($kidzu_option['opt-typography-6']['font-size']) ? $kidzu_option['opt-typography-6']['font-size'] : '';
 
-	if (!empty($heartly_option['opt-typography-6']['line-height'])) {
-		$h6_typography_line_height = $heartly_option['opt-typography-6']['line-height'];
+	if (!empty($kidzu_option['opt-typography-6']['line-height'])) {
+		$h6_typography_line_height = $kidzu_option['opt-typography-6']['line-height'];
 	}
 
 
-	$body_color  = !empty($heartly_option['body_text_color']) ? $heartly_option['body_text_color'] : '';	?>
+	$body_color  = !empty($kidzu_option['body_text_color']) ? $kidzu_option['body_text_color'] : '';	?>
 
 	<!-- Typography -->
 	<?php if (!empty($body_color)) {
-		global $heartly_option;
+		global $kidzu_option;
 	?>
 		<style>
 			body {
@@ -200,38 +200,38 @@ function heartly_custom_colors()
 				<?php } ?>font-size: <?php echo esc_attr($menu_typography_font_fsize); ?>;
 			}
 
-			<?php if (!empty($heartly_option['breadcrumb_top_gap']) && !empty($heartly_option['breadcrumb_bottom_gap'])) : ?>.themephi-breadcrumbs .breadcrumbs-inner,
+			<?php if (!empty($kidzu_option['breadcrumb_top_gap']) && !empty($kidzu_option['breadcrumb_bottom_gap'])) : ?>.themephi-breadcrumbs .breadcrumbs-inner,
 			#themephi-header.header-style-3 .themephi-breadcrumbs .breadcrumbs-inner {
-				padding-top: <?php echo esc_attr($heartly_option['breadcrumb_top_gap']); ?>;
-				padding-bottom: <?php echo esc_attr($heartly_option['breadcrumb_bottom_gap']); ?>;
+				padding-top: <?php echo esc_attr($kidzu_option['breadcrumb_top_gap']); ?>;
+				padding-bottom: <?php echo esc_attr($kidzu_option['breadcrumb_bottom_gap']); ?>;
 			}
 
-			<?php endif; ?><?php if (!empty($heartly_option['breadcrumb_position'])) : ?>.themephi-breadcrumbs {
-				margin-top: <?php echo esc_attr($heartly_option['breadcrumb_position']); ?>;
+			<?php endif; ?><?php if (!empty($kidzu_option['breadcrumb_position'])) : ?>.themephi-breadcrumbs {
+				margin-top: <?php echo esc_attr($kidzu_option['breadcrumb_position']); ?>;
 			}
 
-			<?php endif; ?><?php if (!empty($heartly_option['container_size'])) : ?>@media only screen and (min-width: 1400px) {
+			<?php endif; ?><?php if (!empty($kidzu_option['container_size'])) : ?>@media only screen and (min-width: 1400px) {
 				.container {
-					max-width: <?php echo esc_attr($heartly_option['container_size']); ?>;
+					max-width: <?php echo esc_attr($kidzu_option['container_size']); ?>;
 				}
 			}
 
-			<?php endif; ?><?php if (!empty($heartly_option['preloader_bg_color'])) : ?>#heartly-load {
-				background: <?php echo sanitize_hex_color($heartly_option['preloader_bg_color']); ?>;
+			<?php endif; ?><?php if (!empty($kidzu_option['preloader_bg_color'])) : ?>#kidzu-load {
+				background: <?php echo sanitize_hex_color($kidzu_option['preloader_bg_color']); ?>;
 			}
 
-			<?php endif; ?><?php if (!empty($heartly_option['preloader_animate_color2'])) : ?>#heartly-load .lds-ring div {
-				border-color: <?php echo sanitize_hex_color($heartly_option['preloader_animate_color2']); ?> transparent transparent transparent;
+			<?php endif; ?><?php if (!empty($kidzu_option['preloader_animate_color2'])) : ?>#kidzu-load .lds-ring div {
+				border-color: <?php echo sanitize_hex_color($kidzu_option['preloader_animate_color2']); ?> transparent transparent transparent;
 			}
 
 			<?php endif; ?>
 
-			<?php if (!empty($heartly_option['page_title_color'])) : ?>.themephi-breadcrumbs .page-title {
-				color: <?php echo sanitize_hex_color($heartly_option['page_title_color']); ?> !important;
+			<?php if (!empty($kidzu_option['page_title_color'])) : ?>.themephi-breadcrumbs .page-title {
+				color: <?php echo sanitize_hex_color($kidzu_option['page_title_color']); ?> !important;
 			}
 
-			<?php endif; ?><?php if (!empty($heartly_option['body_bg_color'])) : ?>body.archive.tax-product_cat {
-				background: <?php echo sanitize_hex_color($heartly_option['body_bg_color']); ?> !important;
+			<?php endif; ?><?php if (!empty($kidzu_option['body_bg_color'])) : ?>body.archive.tax-product_cat {
+				background: <?php echo sanitize_hex_color($kidzu_option['body_bg_color']); ?> !important;
 			}
 
 			<?php endif; ?>
@@ -245,7 +245,7 @@ function heartly_custom_colors()
 	<style>
 		<?php 
 		// Use default 'center' if align_breadcrumb is not set
-		$align_breadcrumb = !empty($heartly_option['align_breadcrumb']) ? $heartly_option['align_breadcrumb'] : 'center';
+		$align_breadcrumb = !empty($kidzu_option['align_breadcrumb']) ? $kidzu_option['align_breadcrumb'] : 'center';
 		?>.themephi-breadcrumbs .breadcrumbs-inner {
 			text-align: <?php echo esc_attr($align_breadcrumb); ?> !important;
 		}

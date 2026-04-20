@@ -1,6 +1,6 @@
 <?php
     get_header();
-    global $heartly_option;
+    global $kidzu_option;
 	//take metafield value            
 
     $designation     = get_post_meta( get_the_ID(), 'designation', true );               
@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-6">
             <div class="zq_team_details-content">
-                <span class="zq_team_details-content-subtitle"><?php echo esc_html__('About me', 'heartly'); ?></span>
+                <span class="zq_team_details-content-subtitle"><?php echo esc_html__('About me', 'kidzu'); ?></span>
                 <h2 class="zq_team_details-content-title"><?php the_title(); ?></h2>
                 <p class="zq_team_details-content-text"><?php echo esc_html($short_desc); ?></p>
 
@@ -45,33 +45,33 @@
 
                     <?php if($designation) : ?>
                     <div class="zq_team_details-contact-item">
-                        <span><?php echo esc_html__( 'Designation', 'heartly' ); ?></span>
+                        <span><?php echo esc_html__( 'Designation', 'kidzu' ); ?></span>
                         <p><?php echo esc_html( $designation ); ?></p>
                     </div>
                     <?php endif; ?>
 
                     <?php if($experience) : ?>
                     <div class="zq_team_details-contact-item">
-                        <span><?php echo esc_html__( 'Experience', 'heartly' ); ?></span>
+                        <span><?php echo esc_html__( 'Experience', 'kidzu' ); ?></span>
                         <p><?php echo esc_html( $experience ); ?></p>
                     </div>
                     <?php endif; ?>
 
                     <?php if($email) : ?>
                     <div class="zq_team_details-contact-item">
-                        <span><?php echo esc_html__( 'Email:', 'heartly' ); ?></span>
+                        <span><?php echo esc_html__( 'Email:', 'kidzu' ); ?></span>
                         <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
                     </div>
                     <?php endif; ?>
                     <?php if($phone) : ?>
                     <div class="zq_team_details-contact-item">
-                        <span><?php echo esc_html__( 'Phone:', 'heartly' ); ?></span>
+                        <span><?php echo esc_html__( 'Phone:', 'kidzu' ); ?></span>
                         <a href="tel:<?php echo esc_attr($phone_no_space); ?>"><?php echo esc_html($phone); ?></a>
                     </div>
                     <?php endif; ?>
                     <?php if($location) : ?>
                     <div class="zq_team_details-contact-item">
-                        <span><?php echo esc_html__( 'Location:', 'heartly' ); ?></span>
+                        <span><?php echo esc_html__( 'Location:', 'kidzu' ); ?></span>
                         <a href="#"><?php echo esc_html( $location );?></a>
                     </div>
                     <?php endif; ?>

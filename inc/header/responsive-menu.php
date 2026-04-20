@@ -1,5 +1,5 @@
 <?php
-global $heartly_option;
+global $kidzu_option;
 ?>
 <nav class="nav-container mobile-menu-container mobile-menus menu-wrap-off">
     <ul class="sidenav">

@@ -4,7 +4,7 @@
         the_content();
 
         wp_link_pages( array(
-          'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'heartly' ),
+          'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'kidzu' ),
           'after'       => '</div>',
           'link_before' => '<span class="page-number">',
           'link_after'  => '</span>',
@@ -18,7 +18,7 @@
           //tag add
           $seperator = ''; // blank instead of comma
           $after = '';
-          echo esc_html__( 'Tags: ', 'heartly' );
+          echo esc_html__( 'Tags: ', 'kidzu' );
           the_tags( '', $seperator, $after );
         ?>             
          </div> 

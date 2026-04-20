@@ -12,7 +12,7 @@ else{
             <section id="primary" class="content-area <?php echo esc_attr($col_grid);?> col-sm-12">
                 <main id="main" class="site-main">
                     <?php if ( !have_posts() ): ?>
-                        <h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'heartly' ); ?></h2>
+                        <h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'kidzu' ); ?></h2>
                     <?php endif; ?>
                     <?php
                         if ( have_posts() ) :

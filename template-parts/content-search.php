@@ -5,7 +5,7 @@
     <!-- .entry-header -->
     
     <div class="entry-summary">
-        <p>   <?php echo heartly_custom_excerpt(30);?>   </p>       
+        <p>   <?php echo kidzu_custom_excerpt(30);?>   </p>       
     </div>
     <!-- .entry-summary -->
 

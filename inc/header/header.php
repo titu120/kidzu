@@ -2,14 +2,14 @@
 /*
 Header Style
 */
-global $heartly_option;
-$sticky             = !empty($heartly_option['off_sticky']) ? $heartly_option['off_sticky'] : ''; 
+global $kidzu_option;
+$sticky             = !empty($kidzu_option['off_sticky']) ? $kidzu_option['off_sticky'] : ''; 
 $sticky_menu        = ($sticky == 1) ? ' menu-sticky' : '';
-$drob_aligns        = (!empty($heartly_option['drob_align_s'])) ? 'menu-drob-align' : '';
-$mobile_hide_search = (!empty($heartly_option['mobile_off_search'])) ? 'mobile-hide-search' : '';
-$mobile_hide_cart   = (!empty($heartly_option['mobile_off_cart'])) ? 'mobile-hide-cart-no' : 'mobile-hide-cart';
-$mobile_hide_button = (!empty($heartly_option['mobile_off_button'])) ? 'mobile-hide-button' : '';
-$mobile_logo_height =!empty($heartly_option['mobile_logo_height']) ? 'style = "max-height: '.$heartly_option['mobile_logo_height'].'"' : '';
+$drob_aligns        = (!empty($kidzu_option['drob_align_s'])) ? 'menu-drob-align' : '';
+$mobile_hide_search = (!empty($kidzu_option['mobile_off_search'])) ? 'mobile-hide-search' : '';
+$mobile_hide_cart   = (!empty($kidzu_option['mobile_off_cart'])) ? 'mobile-hide-cart-no' : 'mobile-hide-cart';
+$mobile_hide_button = (!empty($kidzu_option['mobile_off_button'])) ? 'mobile-hide-button' : '';
+$mobile_logo_height =!empty($kidzu_option['mobile_logo_height']) ? 'style = "max-height: '.$kidzu_option['mobile_logo_height'].'"' : '';
 
 // Header Options here
 require get_parent_theme_file_path('inc/header/header-options.php');
@@ -25,9 +25,9 @@ if(is_page() || is_single()){
 	$post_meta_header = get_post_meta(get_queried_object_id(), 'header_select', true);
 }
 
-$heartly_header_id = !empty($heartly_option['header_layout']) ? $heartly_option['header_layout'] : '';
+$kidzu_header_id = !empty($kidzu_option['header_layout']) ? $kidzu_option['header_layout'] : '';
 
-$get_id = !empty($post_meta_header) ? $post_meta_header : $heartly_header_id;
+$get_id = !empty($post_meta_header) ? $post_meta_header : $kidzu_header_id;
 $headser_postion = get_post_meta($get_id, 'header-position', true);
 $get_header = ($headser_postion == 'on') ? 'fixed-header' : '';
 

@@ -3,7 +3,7 @@
 </div><!-- .main-container -->
 
 <?php
-global $heartly_option;
+global $kidzu_option;
 ?>
 <footer>
     <?php
@@ -12,7 +12,7 @@ global $heartly_option;
 </footer>
 </div><!-- #page -->
 <?php 
-if(!empty($heartly_option['show_top_bottom'])){
+if(!empty($kidzu_option['show_top_bottom'])){
 ?>
  <!-- start top-to-bottom  -->
 <div id="top-to-bottom">

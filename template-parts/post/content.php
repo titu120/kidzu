@@ -1,14 +1,14 @@
 <?php
-global $heartly_option;
+global $kidzu_option;
 ?>
 <div class="single-content-full">
-    <?php if(!empty($heartly_option['blog-author-meta']) && $heartly_option['blog-author-meta'] == 'show') : ?>
+    <?php if(!empty($kidzu_option['blog-author-meta']) && $kidzu_option['blog-author-meta'] == 'show') : ?>
         <div class="user-info">
             <!-- single info -->
             <div class="single-info">
                 <i class="tp tp-circle-user-regular"></i>
-                <span><?php echo esc_html__('by', 'heartly');?>  <?php if(!empty($heartly_option['blog-author-post'])){
-                    if ($heartly_option['blog-author-post'] == 'show'): ?>                                                                                         
+                <span><?php echo esc_html__('by', 'kidzu');?>  <?php if(!empty($kidzu_option['blog-author-post'])){
+                    if ($kidzu_option['blog-author-post'] == 'show'): ?>                                                                                         
                         
                         
                         <?php
@@ -43,8 +43,8 @@ global $heartly_option;
             <!-- single info -->
             <div class="single-info cat">
                 <i class="tp tp-tags"></i>
-                <span> <?php if(!empty($heartly_option['blog-category'])){
-                    if($heartly_option['blog-category'] == 'show'){
+                <span> <?php if(!empty($kidzu_option['blog-category'])){
+                    if($kidzu_option['blog-category'] == 'show'){
                         if(get_the_category()):
                             the_category(', ');                                                 
                     endif;
@@ -77,7 +77,7 @@ global $heartly_option;
             the_content();
 
             wp_link_pages( array(
-              'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'heartly' ),
+              'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'kidzu' ),
               'after'       => '</div>',
               'link_before' => '<span class="page-number">',
               'link_after'  => '</span>',
@@ -91,7 +91,7 @@ global $heartly_option;
                     //tag add
                     $seperator = ''; // blank instead of comma
                     $after = '';
-                    echo esc_html__( 'Tags: ', 'heartly' );
+                    echo esc_html__( 'Tags: ', 'kidzu' );
                     the_tags( '', $seperator, $after );
                 ?>             
             </div> 

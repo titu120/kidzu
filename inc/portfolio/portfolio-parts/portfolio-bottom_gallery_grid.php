@@ -24,19 +24,19 @@
                 <div class="tp-portfolio-inner-content-side mb-50">
                     <?php if( $cats_show ) : ?>
                     <div class="tp-portfolio-inner-side-single mb-20">
-                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Category:', 'heartly'); ?></h6>
+                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Category:', 'kidzu'); ?></h6>
                         <?php echo wp_kses_post($cats_show); ?>
                     </div>
                     <?php endif; ?>
                     <?php if ($author_name) : ?>
                     <div class="tp-portfolio-inner-side-single mb-20">
-                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Author:', 'heartly'); ?></h6>
+                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Author:', 'kidzu'); ?></h6>
                         <span><?php echo esc_html($author_name); ?></span>
                     </div>
                     <?php endif; ?>
                     <?php if( $post_date ) : ?>
                     <div class="tp-portfolio-inner-side-single mb-20">
-                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Date:', 'heartly'); ?></h6>
+                        <h6 class="tp-portfolio-inner-side-title"><?php echo esc_html__('Date:', 'kidzu'); ?></h6>
                         <span><?php echo esc_html($post_date); ?></span>
                     </div>
                     <?php endif; ?>

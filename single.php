@@ -1,6 +1,6 @@
 <?php
     get_header();
-    global $heartly_option;
+    global $kidzu_option;
     $post_id      = get_the_id();
     $author_id    = get_post_field ('post_author', $post_id);
     $display_name = get_the_author_meta( 'display_name' , $author_id );
@@ -67,7 +67,7 @@
                                 </div>
                                 <!-- .author-block -->
                         <?php }     
-                        if(!empty($heartly_option['blog-comments']) && $heartly_option['blog-comments'] =='show') :         
+                        if(!empty($kidzu_option['blog-comments']) && $kidzu_option['blog-comments'] =='show') :         
                             $blog_author = '';
                             if($blog_author == ""){
                                 if ( comments_open() || get_comments_number() ) :
@@ -76,7 +76,7 @@
                             }
                             else
                                 {
-                                $blog_author = $heartly_option['blog-comments'];
+                                $blog_author = $kidzu_option['blog-comments'];
                                 if($blog_author == 'show'){     
                                 // If comments are open or we have at least one comment, load up the comment template.
                                 if ( comments_open() || get_comments_number() ) :

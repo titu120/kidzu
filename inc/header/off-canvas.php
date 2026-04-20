@@ -1,7 +1,7 @@
 <?php 
-global $heartly_option;
+global $kidzu_option;
 $rs_offcanvas = get_post_meta(get_the_ID(), 'show-off-canvas', true);
-$logo_height = !empty($heartly_option['logo-height']) ? 'style = "max-height: '.$heartly_option['logo-height'].'"' : '';
+$logo_height = !empty($kidzu_option['logo-height']) ? 'style = "max-height: '.$kidzu_option['logo-height'].'"' : '';
     //off convas here
 ?>
     
